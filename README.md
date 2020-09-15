@@ -2,9 +2,14 @@
 
 We integrated an adapted version of the LRP approach proposed by Arras et al. (2017) into a predictive business process monitoring technique for predicting next activities.
 
-Future research tasks:
-- Further (empirical) evaluation; conduction of an workshop with process analysts 
-- Adaption of the propagation rules of XNAP's LRP to also determine the relevance values of context attributes
-- Comparision of LRP to a model-agnostic approach like LIME
-- Investigation of new types of explanations that better represent the model's complexity
+## Paper
+If you use our code, please cite the paper [Weinzierl et al. (2020)](https://www.researchgate.net/publication/342918341_XNAP_Making_LSTM-based_Next_Activity_Predictions_Explainable_by_Using_LRP):
 
+```
+@proceedings{weinzierl2020xnap,
+    title={XNAP: Making LSTM-based Next Activity Predictions Explainable by Using LRP},
+    author={Sven Weinzierl and Sandra Zilker and Jens Brunk and Kate Revoredo and Martin Matzner and Jörg Becker},
+    booktitle={Proceedings of the 4th International Workshop on Artificial Intelligence for Business Process Management (AI4BPM2020)},
+    year={2020}
+}
+```

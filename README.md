@@ -3,7 +3,7 @@
 We integrated an adapted version of the LRP approach proposed by Arras et al. (2017) into a predictive business process monitoring technique for predicting next activities.
 
 ## Paper
-If you use our code, please cite the paper [Weinzierl et al. (2020)](https://www.researchgate.net/publication/342918341_XNAP_Making_LSTM-based_Next_Activity_Predictions_Explainable_by_Using_LRP):
+If you use our code or fragments, please cite our paper:
 
 ```
 @proceedings{weinzierl2020xnap,
@@ -13,3 +13,5 @@ If you use our code, please cite the paper [Weinzierl et al. (2020)](https://www
     year={2020}
 }
 ```
+
+You can access the paper [here](https://www.researchgate.net/publication/342918341_XNAP_Making_LSTM-based_Next_Activity_Predictions_Explainable_by_Using_LRP).

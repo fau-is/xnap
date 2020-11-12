@@ -8,7 +8,7 @@ def load():
 
     # general parameters
     parser.add_argument('--task', default="nap")
-    parser.add_argument('--data_set', default="bpi2019.csv")
+    parser.add_argument('--data_set', default="helpdesk.csv")
     parser.add_argument('--data_dir', default="./data/")
     parser.add_argument('--model_dir', default="nap/models/")
     parser.add_argument('--result_dir', default="./results/")

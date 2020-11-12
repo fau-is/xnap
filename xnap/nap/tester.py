@@ -1,7 +1,9 @@
 from __future__ import division
-from keras.models import load_model
+import tensorflow as tf
+from tensorflow.keras.models import load_model
 import csv
 import xnap.utils as utils
+import numpy as np
 
 
 def test_prefix(args, preprocessor, process_instance, prefix_size):
@@ -19,6 +21,7 @@ def test_prefix(args, preprocessor, process_instance, prefix_size):
     :return: parameters for LRP
     """
 
+    # select the best model of the ten-fold cross-validation
     model_index = 8
     model = load_model('%sca_%s_%s_%s.h5' % (
                     args.model_dir,
@@ -33,15 +36,18 @@ def test_prefix(args, preprocessor, process_instance, prefix_size):
     y = y[0][:]
 
     prediction = preprocessor.get_event_type_max_prob(y)
+    prediction_class = np.argmax(y)
 
     prob_dist = dict()
     for index, prob in enumerate(y):
         prob_dist[preprocessor.get_event_type(index)] = y[index]
 
     test_data_reshaped = test_data.reshape(-1, test_data.shape[2])
-    cropped_process_instance_label_id = preprocessor.data_structure['support']['map_event_type_to_event_id'][cropped_process_instance_label]
+    cropped_process_instance_label_class = preprocessor.data_structure['support']['map_event_type_to_event_id'][cropped_process_instance_label]
 
-    return prediction, cropped_process_instance_label_id, cropped_process_instance_label, cropped_process_instance, model, test_data_reshaped, prob_dist
+
+
+    return prediction_class, prediction, cropped_process_instance_label_class, cropped_process_instance_label, cropped_process_instance, model, test_data_reshaped, prob_dist
 
 
 def test(args, preprocessor):

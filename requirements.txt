@@ -1,7 +1,7 @@
-matplotlib~=3.0.2
-pandas~=0.25.03
-arrow~=0.15.2
-numpy~=1.18.5
-scikit-learn~=0.23.2
-tensorflow~=2.3.0
-opyenxes~=0.3.0
+matplotlib
+pandas
+arrow
+numpy
+scikit-learn
+tensorflow
+opyenxes
